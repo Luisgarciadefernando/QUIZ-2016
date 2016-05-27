@@ -37,6 +37,3 @@ exports.check = function(req, res, next) {
 		next(error);
 	});
 };
-
-    Status API Training Shop Blog About 
-
