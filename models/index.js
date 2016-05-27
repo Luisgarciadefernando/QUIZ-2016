@@ -35,7 +35,6 @@ sequelize.sync().then(function() {
         { question: 'Capital de Italia', answer: 'Roma' },
         { question: 'Capital de Portugal', answer: 'Lisboa' },
         { question: 'Capital de Chechenia', answer: 'Grozni' }
-              
       ]).then(function(){
         console.log('Base de datos inicializada con preguntas');
       });
@@ -50,8 +49,8 @@ sequelize.sync().then(function() {
   return User.count().then(function (c) {
     if (c === 0) { // la tabla se inicializa si está vacía 
       return User.bulkCreate([
-        { username: 'admin', password: 'rm193210', salt: 'tyrn', isAdmin: true },
-        { username: 'oscar', password: 'rm193210', salt: 'akqj', isAdmin: false }
+        { username: 'admin', password: 'core', salt: 'tyrn', isAdmin: true },
+        { username: 'luis', password: 'core', salt: 'abcd', isAdmin: false }
       ]).then(function(){
         console.log('Base de usuarios inicializada');
       });
