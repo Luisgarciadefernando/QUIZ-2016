@@ -13,8 +13,12 @@ res.render('author', { url: 'https://github.com/Luisgarciadefernando/QUIZ-2016.g
 });
 
 /* GET question */
-router.get('/question', quizController.question);
+
 /* GET check */
-router.get('/check', quizController.check);
+router.get('/quizes', quizController.index);
+router.get('/quizes/:quizId(\\d+)',quizController.show);
+router.get('/quizes/:quizId(\\d+)/check',quizController.check);
+
+
 
 module.exports = router;
