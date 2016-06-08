@@ -1,11 +1,16 @@
+
+<h2>Usuario</h2>
+
 <p>
   <b>Username:</b>
   <%= user.username %>
 </p>
+
 <p>
   <b>Es Administrador:</b>
   <%= user.isAdmin ? "Si" : "No" %>
 </p>
+
 <% if (session.user) { %>
   <p>
     <% if (session.user.isAdmin || session.user.id === user.id) { %>
@@ -13,6 +18,7 @@
         <button type="button"> Editar </button>
       </a>
     <% } %>
+
     <% if (session.user.isAdmin && session.user.id !== user.id) { %>
       <a href="/users/<%= user.id %>?_method=DELETE"> 
         <button type="button"
@@ -23,6 +29,7 @@
     <% } %>
   </p>
 <% } %>
+
 <a href="/users"> 
    <button type="button">Volver</button>
 </a>
